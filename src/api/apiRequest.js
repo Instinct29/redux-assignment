@@ -35,8 +35,16 @@ const PostApiDetails = (data)=>{
     return AxiosRequest("http://localhost:3000/details","POST",headers,data)
 };
 
+const GetDetailsById = (id)=>{
+    const headers = {
+        "content-Type" : "application/json"
+    }
+    return AxiosRequest("http://localhost:3000/details/"+id,"GET",headers,{})
+};
 
-export {GetApiDetails, PostApiDetails} ;
+
+
+export {GetApiDetails, PostApiDetails, GetDetailsById} ;
 
 
 

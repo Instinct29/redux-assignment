@@ -1,20 +1,25 @@
-import axios from 'axios';
+
 import React, { useEffect } from 'react'
 import {useDispatch, useSelector} from "react-redux";
+import { Link, useNavigate } from 'react-router-dom';
 import {getData} from "../Redux/Actions/getDataActionType";
 
 const DataTable = () => {
     const dispatch = useDispatch();
-    const data = useSelector((state)=>state.finalData.data)
-
- 
-        
-    
-
     useEffect(()=>{
       dispatch(getData());
 
     },[dispatch])
+    const data = useSelector((state)=>state.finalData.data)
+
+    const navigate = useNavigate();
+
+   
+
+  const changeHandler = (e)=>{
+    navigate("/")
+
+  }
     
     
   return (
@@ -27,6 +32,7 @@ const DataTable = () => {
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">Country</th>
+      <th scope='col'>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -39,6 +45,7 @@ const DataTable = () => {
                 <td>{eachData.email}</td>
                 <td>{eachData.phone}</td>
                 <td>{eachData.country}</td>
+                <td><Link to={`/edit/${eachData.id}`}><span class="material-icons">edit</span></Link></td>
                </tr>
             )      
         })
@@ -46,6 +53,8 @@ const DataTable = () => {
  
   </tbody>
 </table>
+
+<button onClick={changeHandler} type="button" className="btn btn-primary">Back</button>
 
         
 
@@ -76,6 +85,6 @@ export default DataTable
 
 
    // const fetchData = async () => {
-    //     const response = await axios.get("https://jsonplaceholder.typicode.com/posts").catch((err)=>{
+   //     const response = await axios.get("https://jsonplaceholder.typicode.com/posts").catch((err)=>{
     //         console.log("This is the error",err)
     //     })

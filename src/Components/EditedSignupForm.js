@@ -1,16 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import {  useNavigate } from 'react-router-dom'
 import { postData } from '../Redux/Actions/getDataActionType'
-import EditSignupForm from './EditedSignupForm'
+import { useParams } from 'react-router-dom'
+import GetDetailsByHooks from "../Hooks/getDetailsByHooks"
 
-const SignupPage = () => {
+const EditSignupForm = () => {
+   const {id} = useParams();
+   console.log("id by useParams is______",id)
    const [values, setValues] = useState({
       name:"",
       email:"",
       phone:"",
       country:""
    })
+
+   
 
    const navigate = useNavigate()
 
@@ -27,6 +32,22 @@ const SignupPage = () => {
    }
 
    const dispatch = useDispatch();
+   const [detailsById] = GetDetailsByHooks(id);
+   console.log("Details By ID",detailsById)
+
+   useEffect(()=>{
+      const data = ()=>{
+         if(detailsById.data){
+            setValues(detailsById.data)
+         }
+      }
+      data()
+   })
+   
+
+
+
+
 
    const clickHandler = (e)=>{
       e.preventDefault()
@@ -36,8 +57,6 @@ const SignupPage = () => {
          phone:values.phone,
          country:values.country
       }
-      
-
 
       dispatch(postData(finalData))
 
@@ -47,33 +66,34 @@ const SignupPage = () => {
 
 
 
-
   return (
     <div>
+
+        <h1>Edit you Data</h1>
 
        <form >
 
        <div>
            <label>Name </label>
-           <input name ="name" type = "text" onChange={handleChange}/>
+           <input   defaultValue={values.name} name ="name" type = "text" onChange={handleChange}/>
         </div>
 
         <div>
            <label>Email </label>
-           <input name = "email" type = "email" onChange={handleChange}/>
+           <input defaultValue={values.email}  name = "email" type = "email" onChange={handleChange}/>
         </div>
 
         <div>
            <label>Phone </label>
-           <input name = "phone" type = "number" onChange={handleChange}/>
+           <input defaultValue={values.phone} name = "phone" type = "number" onChange={handleChange}/>
         </div>
 
         <div>
            <label>Country </label>
-           <input name = "country" type = "text" onChange={handleChange}/>
+           <input defaultValue={values.country} name = "country" type = "text" onChange={handleChange}/>
         </div>
 
-        <button className='btn btn-danger' onClick={clickHandler}>Submit</button>
+        <button  className='btn btn-secondary' onClick={clickHandler}>Update Details</button>
 
        </form>
 
@@ -83,4 +103,4 @@ const SignupPage = () => {
   )
 }
 
-export default SignupPage
+export default EditSignupForm;
