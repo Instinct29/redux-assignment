@@ -1,0 +1,74 @@
+{
+  "details": [
+    {
+      "id": 1,
+      "name": "manthan",
+      "email": "manthangour20@gmail.com",
+      "phone": 6350039675,
+      "country": "India"
+    },
+    {
+      "id": 2,
+      "name": "manthan",
+      "email": "manthangour20@gmail.com",
+      "phone": 6350039675,
+      "country": "India"
+    },
+    {
+      "id": 3,
+      "name": "manthan",
+      "email": "manthangour20@gmail.com",
+      "phone": 6350039675,
+      "country": "India"
+    },
+    {
+      "id": 6,
+      "name": "Rupal",
+      "email": "Rupalsaini20@gmail.com",
+      "phone": 6350039675,
+      "country": "Austraila"
+    },
+    {
+      "name": "Rupal",
+      "email": "rupal@gmail.com",
+      "phone": "",
+      "country": "",
+      "id": 7
+    },
+    {
+      "name": "Prateek",
+      "email": "prateek@gmail.com",
+      "phone": "8932289763",
+      "country": "USA",
+      "id": 8
+    },
+    {
+      "name": "manthannew",
+      "email": "manthan@dfdsf",
+      "phone": "234324",
+      "country": "india",
+      "id": 9
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "country": "",
+      "id": 10
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "country": "",
+      "id": 11
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "country": "",
+      "id": 12
+    }
+  ]
+}
