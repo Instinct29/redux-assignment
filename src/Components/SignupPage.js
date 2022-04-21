@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {  useNavigate } from 'react-router-dom'
 import { postData } from '../Redux/Actions/getDataActionType'
 import EditSignupForm from './EditedSignupForm'
@@ -27,6 +27,7 @@ const SignupPage = () => {
    }
 
    const dispatch = useDispatch();
+   const isResponse = useSelector((state)=>state.finalData.isResponse)
 
    const clickHandler = (e)=>{
       e.preventDefault()

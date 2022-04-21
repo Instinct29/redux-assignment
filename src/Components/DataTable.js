@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import {useDispatch, useSelector} from "react-redux";
 import { Link, useNavigate } from 'react-router-dom';
-import {getData} from "../Redux/Actions/getDataActionType";
+import {getData, deleteData} from "../Redux/Actions/getDataActionType";
 
 const DataTable = () => {
     const dispatch = useDispatch();
@@ -32,20 +32,23 @@ const DataTable = () => {
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">Country</th>
-      <th scope='col'>Actions</th>
+      <th scope='col'>Edit</th>
+      <th scope='col'>Delete</th>
+
     </tr>
   </thead>
   <tbody>
     {
         data.map((eachData)=>{
             return(
-                <tr>
+                <tr key={eachData.id}>
                 <td>{eachData.id}</td>
                 <td>{eachData.name}</td>
                 <td>{eachData.email}</td>
                 <td>{eachData.phone}</td>
                 <td>{eachData.country}</td>
                 <td><Link to={`/edit/${eachData.id}`}><span class="material-icons">edit</span></Link></td>
+                <td><span class="material-icons text-danger"  onClick={()=>dispatch(deleteData(eachData.id))}>delete</span></td>
                </tr>
             )      
         })
@@ -69,9 +72,7 @@ export default DataTable
 
 
 
-
-
-
+               
 
 
 

@@ -1,39 +1,11 @@
 {
   "details": [
     {
-      "id": 1,
-      "name": "manthan",
-      "email": "manthangour20@gmail.com",
-      "phone": 6350039675,
-      "country": "India"
-    },
-    {
-      "id": 2,
-      "name": "manthan",
-      "email": "manthangour20@gmail.com",
-      "phone": 6350039675,
-      "country": "India"
-    },
-    {
-      "id": 3,
-      "name": "manthan",
-      "email": "manthangour20@gmail.com",
-      "phone": 6350039675,
-      "country": "India"
-    },
-    {
-      "id": 6,
       "name": "Rupal",
       "email": "Rupalsaini20@gmail.com",
       "phone": 6350039675,
-      "country": "Austraila"
-    },
-    {
-      "name": "Rupal",
-      "email": "rupal@gmail.com",
-      "phone": "",
-      "country": "",
-      "id": 7
+      "country": "Austraila",
+      "id": 6
     },
     {
       "name": "Prateek",
@@ -50,25 +22,11 @@
       "id": 9
     },
     {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "country": "",
-      "id": 10
-    },
-    {
       "name": "Navneet",
       "email": "navneet@gmail.com",
       "phone": "2321898",
       "country": "Pak",
       "id": 11
-    },
-    {
-      "name": "",
-      "email": "",
-      "phone": "",
-      "country": "",
-      "id": 12
     },
     {
       "name": "Bhanu",
@@ -83,6 +41,76 @@
       "phone": "12321442",
       "country": "Afganisthan",
       "id": 14
+    },
+    {
+      "name": "Ankur",
+      "email": "ankur@gmail.com",
+      "phone": "6543330987",
+      "country": "Germany",
+      "id": 15
+    },
+    {
+      "name": "NewData",
+      "email": "NewEmail",
+      "phone": "22222",
+      "country": "NewCountry",
+      "id": 16
+    },
+    {
+      "name": "tinku",
+      "email": "tinku@gmail.com",
+      "phone": "21233211",
+      "country": "BAngladesh",
+      "id": 17
+    },
+    {
+      "name": "tinku",
+      "email": "tinku@gmail.com",
+      "phone": "21233211",
+      "country": "BAngladesh",
+      "id": 18
+    },
+    {
+      "name": "tinku",
+      "email": "tinku@gmail.com",
+      "phone": "21233211",
+      "country": "BAngladesh",
+      "id": 19
+    },
+    {
+      "name": "sdasds",
+      "email": "asdasdasd",
+      "phone": "23e123",
+      "country": "asdasdasd",
+      "id": 20
+    },
+    {
+      "name": "sdasds",
+      "email": "asdasdasd",
+      "phone": "23e123",
+      "country": "asdasdasd",
+      "id": 21
+    },
+    {
+      "name": "Prateek",
+      "email": "prateek@gmail.com",
+      "phone": "8932289763",
+      "country": "USA",
+      "id": 22
+    },
+    {
+      "name": "Prateek",
+      "email": "prateek@gmail.com",
+      "phone": "8932289763",
+      "country": "USA",
+      "id": 23
+    },
+    {
+      "name": "sheesh",
+      "email": "sheesh@gmail```",
+      "phone": "",
+      "country": "eeee",
+      "id": 24
     }
   ]
 }

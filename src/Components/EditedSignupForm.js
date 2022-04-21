@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch} from 'react-redux'
 import {  useNavigate } from 'react-router-dom'
-import { postData } from '../Redux/Actions/getDataActionType'
+import {  updateData } from '../Redux/Actions/getDataActionType'
 import { useParams } from 'react-router-dom'
 import GetDetailsByHooks from "../Hooks/getDetailsByHooks"
 
@@ -30,8 +30,9 @@ const EditSignupForm = () => {
       })
 
    }
-
+   
    const dispatch = useDispatch();
+
    const [detailsById] = GetDetailsByHooks(id);
    console.log("Details By ID",detailsById)
 
@@ -45,10 +46,6 @@ const EditSignupForm = () => {
    })
    
 
-
-
-
-
    const clickHandler = (e)=>{
       e.preventDefault()
       const finalData = {
@@ -58,12 +55,13 @@ const EditSignupForm = () => {
          country:values.country
       }
 
-      dispatch(postData(finalData))
+     // dispatch(updateData(finalData,id))
 
       navigate("/table")
 
    }
 
+  
 
 
   return (
